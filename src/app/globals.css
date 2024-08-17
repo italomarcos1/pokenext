@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  font-family: var(--font-inter);
+  background-color: #000 !important;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-kumbh);
+  font-weight: 700;
+}
+
+body {
+  background-color: #000 !important;
+  font-family: var(--font-inter);
+  color: #fbfdfd !important;
+  text-align: left !important;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #494949; 
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: all 0.2s;
+  background: #696969;
+}
+
+@layer utilities {
+  .title-gradient {
+    -webkit-background-clip: text;
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-[#FBFDFD] to-[#FBFDFD]/70;
+  }
+
+  .user-in-room {
+    @apply flex items-center gap-2 pl-2 py-2 duration-200 bg-[#1F1F1F]/50 hover:bg-white/5;
+  }
+}
