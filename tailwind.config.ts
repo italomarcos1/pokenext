@@ -17,6 +17,9 @@ const config: Config = {
         kumbh: ['var(--font-kumbh)'],
         inter: ['var(--font-inter)']
       },
+      maxWidth: {
+        "desktop": "80rem"
+      }
     },
   },
   plugins: [],
