@@ -1,21 +1,24 @@
 "use client"
+
 import Image from "next/image";
 
 import data from "./pokedex.json"
 
 export default function Home() {
-  // console.log("data", data)
-  console.log("data", data)
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <h1>Pokenext</h1>
-      <section className="grid w-full max-w-desktop h-full px-5 grid-cols-4 gap-5">
+      <section className="grid w-full max-w-desktop h-full px-5 grid-cols-4 gap-5 max-lg:grid-cols-3 max-sm:grid-cols-2">
         {data.pokemon.map((p) =>
-          <div key={p.id} className="flex flex-col w-full bg-gradient-to-b from-lightBlack to-white/5 backdrop-blur-md rounded-md duration-200 border border-lightBlack hover:border-white/10 hover:scale-[1.02]">
-            <img
+          <div
+            key={p.id}
+            className="flex flex-col w-full bg-gradient-to-b from-lightBlack to-white/5 backdrop-blur-md rounded-md duration-200 border border-lightBlack animate-pop-in-up hover:border-white/10 hover:scale-[1.02]"
+          >
+            <Image
               src={p.img}
-              alt=""
+              alt={p.name}
+              width={100}
+              height={100}
               className="w-full aspect-square object-cover rounded-lg"
             />
             <div className="flex flex-col p-4 pt-3">

@@ -19,6 +19,23 @@ const config: Config = {
       },
       maxWidth: {
         "desktop": "80rem"
+      },
+      keyframes: {
+        'pop-in-up': {
+          '0%': {
+            transform: 'translateY(1.5rem)',
+            scale: "0.95",
+            opacity: "0"
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            scale: "1",
+            opacity: "1"
+          },
+        },
+      },
+      animation: {
+        'pop-in-up': 'pop-in-up 0.25s ease-out',
       }
     },
   },
