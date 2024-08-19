@@ -6,7 +6,7 @@ import { inter, kumbhSans } from "./fonts";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Pokenext",
+  title: "Pokenextics",
   description: "A Pokedex app built with NextJS",
 };
 
@@ -15,6 +15,9 @@ type Props = Readonly<{ children: ReactNode }>
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+      </head>
       <body className={`${inter.variable} ${kumbhSans.variable}`}>
         <header className="flex flex-col w-full max-w-desktop mx-auto py-4 px-5 gap-4">
           <Link href="/">
