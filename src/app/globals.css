@@ -27,7 +27,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: #000 !important;
+  /* background-color: #000 !important; */
+  background: linear-gradient(0deg, rgba(5,11,17,1) 0%, #191919 100%);
   font-family: var(--font-inter);
   color: #fbfdfd !important;
   text-align: left !important;
