@@ -48,6 +48,7 @@ export default function Home() {
   useEffect(() => {
     setOrder("Ordem Alfabética")
     setSearch("")
+    setSearchResults([])
     setSelectedCategories([])
   }, [searchMode])
 

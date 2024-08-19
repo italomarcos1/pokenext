@@ -90,13 +90,15 @@ export default function PokemonDetails() {
       }, []).filter(p => !!p) as Pokemon[]
     }
 
+    const fieldsToRemove = ["prevEvolutions", "nextEvolutions", "fullDescription"]
+
     return {
       img,
       name,
       description,
       num,
       type,
-      attributes: Object.entries(attributes).map(a => Array.isArray(a[1]) && a[0] === "multipliers" ? [a[0], a[1].join(", ")] : a),
+      attributes: Object.entries(attributes).map(a => Array.isArray(a[1]) && a[0] === "multipliers" ? [a[0], a[1].join(", ")] : a).filter(r => !fieldsToRemove.includes(r[0])),
       previousEvolutions,
       nextEvolutions
     }
