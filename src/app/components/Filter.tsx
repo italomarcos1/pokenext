@@ -8,7 +8,7 @@ type Props = {
 
 export function Filter({ order, setOrder }: Props) {
   return (
-    <div className="z-50 relative bg-lightBlack backdrop-blur-sm w-64 max-md:w-full flex flex-col h-12 rounded-md border border-white/10 p-3 text-white group hover:rounded-b-none">
+    <div className="z-50 relative bg-lightBlack backdrop-blur-sm w-[18.75rem] max-md:w-full flex flex-col h-12 rounded-md border border-white/10 p-2 text-white group hover:rounded-b-none">
       <p className="w-full text-sm font-medium h-12 rounded-md flex items-center gap-2">
         <ListFilterIcon size={16} />
         {order}

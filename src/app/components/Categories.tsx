@@ -35,8 +35,8 @@ export function Categories({ selectedCategories, setSelectedCategories }: Props)
   , [selectedCategories, setSelectedCategories])
 
   return (
-    <div className="z-60 relative bg-lightBlack backdrop-blur-sm w-72 max-md:w-full flex flex-col h-12 rounded-md border border-white/10 py-2 p-3 justify-center text-white group">
-      <div className="flex overflow-y-hidden overflow-x-auto gap-2 pb-1">
+    <div className="z-60 relative bg-lightBlack backdrop-blur-sm w-[20rem] max-md:w-full flex flex-col h-12 rounded-md border border-white/10 p-2 justify-center text-white group">
+      <div className="flex overflow-y-hidden text-sm overflow-x-auto gap-2 pb-1">
         {!!selectedCategories.length ? selectedCategories.map(c =>
           <div
             key={c}
